@@ -1,0 +1,21 @@
+.logoDiv {
+  background-color: #ffffff;
+  height: 70px;
+  width: 15%;
+  float: left;
+  z-index: 2;
+}
+.App-logo {
+  position: absolute;
+  height: 65px;
+  width: 15%;
+  border-style: none;
+  pointer-events: none;
+  left: 2%;
+}
+h1 {
+  line-height: 80px;
+  color: #000000;
+  font-size: 30px;
+  margin: 0px;
+}

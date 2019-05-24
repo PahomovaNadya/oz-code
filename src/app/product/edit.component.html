@@ -1,0 +1,26 @@
+<form [formGroup]="myFirstReactiveForm" (submit)="onSubmit()">
+  <input type="hidden" id="idProduct" formControlName="idProduct" />
+  <img src="http://www.naddim.com/nadya/oz-code/images/pr3.jpg" /><br />
+  <label for="title">Name:</label><br/>
+	<input type="text" id="name" formControlName="name" /><br/>
+  <div class="error" *ngIf="isControlInvalid('name')">
+    The name field can not be empty
+  </div><br/>
+	<label for="description">Description:</label><br/>
+	<textarea type="text" id="description" formControlName="description"></textarea><br/>
+    <div class="error" *ngIf="isControlInvalid('description')">
+      The description field can not be empty
+  </div><br/>
+  <label for="price">Price:</label><br />
+  <input type="text" id="price" formControlName="price" /><br />
+  <div class="error" *ngIf="isControlInvalid('price')">
+    The price field can not be empty
+</div><br/>
+  <button 
+    mat-raised-button color="primary"
+    matBadge="8" 
+    matBadgePosition="before" 
+    matBadgeColor="accent" 
+    type="submit"
+  >SAVE</button>
+</form>
