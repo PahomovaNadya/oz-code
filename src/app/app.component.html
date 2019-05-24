@@ -1,0 +1,68 @@
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="large"
+  color="#fff"
+  loadingText="Loading..."
+  type="ball-clip-rotate-pulse">
+</ngx-spinner>
+<div class="topBlock">
+  <app-header></app-header>
+  <div class="buttonDiv">
+    <button mat-raised-button color="primary"
+    matBadge="6" matBadgePosition="before" matBadgeColor="accent" (click)="addResult()">Add Product</button>
+  &nbsp;&nbsp;
+    <div class="search">
+      <i class="fa fa-search search-icon"></i>
+      <input type="text" placeholder="search product" 
+        id="searchTitle"
+        [(ngModel)]="mySearchArr" 
+      /> 
+    </div>
+    &nbsp;&nbsp;
+    <button mat-raised-button color="primary-red"
+    matBadge="6" matBadgePosition="before" matBadgeColor="accent" (click)="clearMemory()">Clear Memory</button>
+  </div>
+</div>
+<div class="generalCls">
+    <div class="bigList">
+      <div class="productList" [ngClass]="{'productList-size-min': isMarked}" [ngClass]="{'productList-size-max': !isMarked}" >
+        <div class="container">
+          <div class="rowLine">
+            <app-product-list
+            *ngFor="let book of productInfoN | mySearch:mySearchArr"
+            [item]="book"
+            ></app-product-list>
+          </div>
+        </div>
+  
+        <div class="bootomLine" [style.visibility]="isDivVisible ? 'visible' : 'hidden'">
+          <div>
+            <div class="ui-paginator ui-widget ui-widget-header ui-unselectable-text ui-helper-clearfix ng-star-inserted">
+              <p-paginator [rows]="countArrPage" [totalRecords]="countArr" pageLinkSize="3" (onPageChange)="paginate($event)"></p-paginator>
+            </div>
+            <div class="countEl">
+              <select #c (change)=selectItemCount(c.value)>
+                <option *ngFor="let itemCount of itensCount" [value]="itemCount" [selected]="(itemCount==countArrPage) ? 'selected' : ''">
+                    {{itemCount}}
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="editPanel" [ngClass]="{'notActiveBlock': !isMarked}" [ngClass]="{'activeBlock': isMarked}">
+        <div> 
+          <app-edit
+          *ngFor="let productSel of selectProduct"
+          [itemSelect]="productSel" 
+          [countArr]="countArr"
+          ></app-edit>
+        </div> 
+      </div>
+    </div>
+</div>
+<div class="footerBlock">
+  Copyright &copy;Nadezjda Pahomova-Tsetlina. All rights reserved.
+</div>
+<div class="backBlock"></div>

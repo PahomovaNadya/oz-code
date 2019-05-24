@@ -1,0 +1,200 @@
+.topBlock {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 80px;
+  border: 0px;
+  background-color: #ffffff !important;
+  z-index: 2;
+}
+.backBlock {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(http://oz-code.com/wp-content/uploads/2019/03/3-01.png);
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: 20% auto;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+
+button {
+  font-family: "Montserrat", Sans-serif;
+  font-weight: 700;
+  color: #000000;
+  /*background-color: #fedf00 !important;*/
+  border-radius: 25px;
+  padding: 3px 20px 3px 20px;
+}
+.footerBlock {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(1px + 1.5vmin);
+  color: white;
+  z-index: 2;
+}
+.row {
+  margin-bottom: 0px !important;
+}
+.bigList {
+  width: 131%;
+}
+.generalCls {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+  z-index: 10;
+}
+.productList {
+  max-width: 100vw;
+  width: 100%;
+  float: left;
+}
+.container {
+  width: 100%;
+  max-width: 100vw !important;
+}
+.rowLine:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.rowLine {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* =========== MODALDIALOG ========== */
+.editPanel {
+  width: 400px !important;
+  float: left;
+  background-color: #ffffff !important;
+  padding-bottom: 20px;
+}
+.editPanel input {
+  margin: 0px !important;
+}
+.activeBlock {
+  display: block;
+}
+.notActiveBlock {
+  display: none;
+}
+
+@media screen and (max-width: 610px) {
+  .modalDialog > div { 
+    width: 90%;
+  }
+}
+@media (min-width: 620px) and (orientation: landscape) {
+  .modalDialog > div { 
+    margin: 1% auto !important;
+  }
+}
+/* ========= END MODALDIALOG ======== */
+.bootomLine {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+.bootomLine > div {
+  width: 350px;
+  margin: 0 auto;
+}
+.countEl {
+  float: left;
+  margin-top: 10px;
+  width: 50px;
+  vertical-align: middle;
+  display: inline-block;
+}
+select {
+  padding: 0px 0px 0px 5px;
+  display: block;
+  height: 1.8rem;
+}
+@media screen and (min-width: 910px) {
+  .productList-size-min {
+    animation: productList-min infinite 1s linear;
+    animation-iteration-count: 1;
+    width: 55%
+  }
+  .productList-size-max {
+    animation: productList-max infinite 1s linear;
+    animation-iteration-count: 1;
+    width: 100%
+  }
+  @keyframes productList-min {
+    from { width: 100%; }
+    50% { width: 80%; }
+    to { width: 55%; }
+  }
+  @keyframes productList-max {
+    from { width: 55%; }
+    50% { width: 80%; }
+    to { width: 100%; }
+  }
+}
+@media screen and (max-width: 900px) {
+  .productList-size-max {
+    position: inherit;
+  }
+  .editPanel {
+    margin-bottom: 20px;
+  }
+}
+.buttonDiv{
+  margin: 0.5rem 0px 2.5rem 20rem;
+  padding: 0px;
+  padding-top: 2%;
+}
+.buttonDiv button { 
+  float: left;
+}
+/* =========== SEARCH =================== */
+.search{
+  float: left;
+  margin-left: 10px;
+  width: 300px;
+  line-height: 36px;
+  height: 36px;
+  background-color: #ffffff;
+  border: 1px solid #337ab7;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.search input {
+  border: 0px !important;
+  width: 250px;
+  line-height: 28px;
+  height: 30px;
+  color: #337ab7;
+  box-shadow: none !important;
+}
+.search input:hover {
+  border: 0px !important;
+}
+i {
+  margin: 8px 10px;
+  float: left;
+}
+.search-icon { 
+  color: #337ab7; 
+  font-size: 1.2rem !important; 
+}
+button.mat-primary-red {
+  background-color: #2cdae0;
+  color: #0000ff;
+  float: right !important;
+  margin-right: 2%;
+  font-weight: bold;
+}

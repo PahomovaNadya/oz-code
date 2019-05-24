@@ -1,0 +1,23 @@
+<div class="card" 
+  (click)="editProduct(item.idProduct)"
+	appProduct
+><!--	(load)="onProductLoad()" -->
+  <div class="card-image">
+    <img src={{item.imageUrl}} />
+  </div> 
+  <div class="card-content">
+    <div class="card-name">{{item.name}}</div>
+    <hr />
+    <p>{{item.description}}</p>
+    <hr />
+    Price: {{item.price}}
+  </div>
+  <div class="buttonBlock">
+    <button mat-raised-button color="primary"
+      matBadge="6" 
+      matBadgePosition="before" 
+      matBadgeColor="accent" 
+      (click)="deleteProduct(item.idProduct)"
+    >Delete</button>
+  </div>
+</div>
