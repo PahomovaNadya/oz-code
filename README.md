@@ -1,27 +1,22 @@
-# Codevalue
+For work it is necessary to install packages:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
+npm install --save ngx-spinner@1.2.0
+npm install --save classlist.js
+npm install --save web-animations-js
+npm install --save primeng@5.2.6
+npm install --save @ng-bootstrap/ng-bootstrap@2.2.2
+npm install --save @angular/cdk@5.2.5
+npm install --save @angular/material@5.2.0
 
-## Development server
+Add in index.html:
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+For correct work in IE, in the polyfills.ts file open the lines:
+	import 'web-animations-js';
+	import 'classlist.js';
 
-## Code scaffolding
+Both tasks and step-1 and step-2 are presented in one design: desktop and mobile.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To clear memory use the link: 
+	http://localhost:4200/?product=112233
